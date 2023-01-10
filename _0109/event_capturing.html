@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<!-- DOM Tree -->
+<!--
+    Document
+    -> html
+        -> head
+        -> body
+            -> div
+                -> span
+                    -> button
+
+    Capturing은 반대로 위에서 전파되는 흐름
+    (Document - html - body - div - span - button)
+-->
+
+<!--
+  DOM Event의 단계
+  (1) Capture Phase
+  (2) Target Phase
+  (3) Bubbling Phase
+  
+  실제로 실행 시 캡쳐가 이루어진 후에 버블링을 확인 할 수 있음
+-->
+
+<body>
+    <div>
+        <span>
+            <button>Click</button>
+        </span>
+    </div>
+</body>
+
+<script type="text/javascript" src="./event_capturing.js"></script>
+<style>
+body {
+  padding: 20px;
+  background-color: pink;
+}
+
+div {
+  padding: 20px;
+  background-color: green;
+  width: max-content;
+}
+
+span {
+  display: block;
+  padding: 20px;
+  background-color: blue;
+} 
+</style>
+</html>

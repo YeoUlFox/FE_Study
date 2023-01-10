@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<!-- DOM Tree -->
+<!--
+    Document
+    -> html
+        -> head
+        -> body
+            -> div
+                -> span
+                    -> button
+
+    이벤트 발생 시, Document에 도달 할 때까지 위쪽으로 Propagation 발생
+    (button - span - div - body - html - Document)
+-->
+
+<body>
+    <div>
+        <span>
+            <button>Click</button>
+        </span>
+    </div>
+</body>
+
+<script type="text/javascript" src="./stop_event_bubbling.js"></script>
+<style>
+body {
+  padding: 20px;
+  background-color: pink;
+}
+
+div {
+  padding: 20px;
+  background-color: green;
+  width: max-content;
+}
+
+span {
+  display: block;
+  padding: 20px;
+  background-color: blue;
+} 
+</style>
+</html>
